@@ -24,6 +24,20 @@ key propulsion metrics.
    bundled `APC 17x8.pdf` sample) and enter your motor's Kv, resistance, supply
    voltage, and current limits to view performance plots.
 
+## Testing
+
+Run the automated smoke tests to verify that the bundled APC dataset parses
+correctly and that the motor performance pipeline generates the expected
+columns:
+
+```bash
+pytest
+```
+
+The suite loads `APC 17x8.pdf`, computes a representative motor setup, and
+asserts that feasible operating points and finite efficiency values are
+produced.
+
 ## Features
 
 - Automatic parsing of APC propeller datasets exported either as plain text or
